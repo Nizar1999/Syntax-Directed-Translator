@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+Syntax Directed Translator.sln
+*.vcxproj
+Syntax Directed Translator.vcxproj.filters
