@@ -2,15 +2,16 @@
 
 void Parser::expr() {
 	term();
-	rest();
-}
-
-void Parser::rest() {
-	if (lookahead == '+') {
-		match('+'); term(); print("+"); rest();
-	}
-	else if (lookahead == '-') {
-		match('-'); term(); print("-"); rest();
+	while (true) {
+		if (lookahead == '+') {
+			match('+'); term(); print("+"); continue;
+		}
+		else if (lookahead == '-') {
+			match('-'); term(); print("-"); continue;
+		}
+		else {
+			break;
+		}
 	}
 }
 

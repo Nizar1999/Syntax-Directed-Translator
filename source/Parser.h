@@ -13,6 +13,8 @@
 	term -> 9 {print("9")}
 
 	Non-terminals: expr, rest, term
+	
+	Rest procedure optimized into while loop in expr()
 */
 
 #include <string>
@@ -34,7 +36,6 @@ private:
 
 private:
 	//Non-terminals
-	void rest();
 	void term();
 
 	//Utility
